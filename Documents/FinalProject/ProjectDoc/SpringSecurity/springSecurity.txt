@@ -1,0 +1,47 @@
+## Spring Security
+=> we have implemented spring security for accesing the pages in our web app.Two roles are maintained in this app, one is ROLE "Admin" and other "User". Spring security checks the user whether it is normal user or admin user as per its role. If it is admin user then only it will give access to admin pages else it will reject the user to give access. For that it checks the user in the database using Dao Authentication. as shown in fig "DaoAuthentication.png" . PageAccess.png shows the pages which are authenticated with Spring Security.
+
+The libraries used for Spring security are :
+
+* org.springframework.beans.factory.annotation.Autowired;
+* org.springframework.context.annotation.Bean;
+* org.springframework.context.annotation.ComponentScan;
+* org.springframework.context.annotation.Configuration;
+* org.springframework.security.authentication.AuthenticationProvider;
+* org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+* org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+* org.springframework.security.config.annotation.web.builders.HttpSecurity;
+* org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+* org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+* org.springframework.security.core.userdetails.UserDetailsService;
+* org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+* org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+# Maven Dependencies used : 
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>5.0.4.RELEASE</version>
+		</dependency>
+
+# Password Encoding
+=> for password encoding we used BCryptPasswordEncoder with 12 round of hashing.
+
+# Custom AuthenticationFailure Handler
+=> we have maintained our own CustomAuthenticationFailureHandler to recognize if unknown person is trying to access the admin account or If the admin account is locked due to multiple invalid access.

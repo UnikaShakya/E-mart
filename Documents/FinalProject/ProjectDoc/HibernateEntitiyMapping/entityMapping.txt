@@ -1,0 +1,22 @@
+### Entity Mapping.
+
+=> Here hibernate is used to work with database. The Entity is mapped to the database so that for any operation in database hibernate will work as a middle man between entity and databse and carry out any CRUD operation. The library used for hibernate are :
+	1. javax.persistence.Column;
+	2. javax.persistence.Entity;
+	3. javax.persistence.GeneratedValue;
+	4. javax.persistence.GenerationType;
+	5. javax.persistence.Id;
+	6. javax.persistence.Table;
+
+## Maven Dependencies :
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.3.Final</version>
+		</dependency>

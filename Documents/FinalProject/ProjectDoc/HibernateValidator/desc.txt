@@ -1,0 +1,15 @@
+## Hibernate Validator
+=> To validate form we have used hibernate validator. It will validate the required fields of the form as we have specified in validation section as shown in figure "HibernateValidaor.png".
+=> The libraries used for hibernate validator are : 
+ 	1. javax.validation.constraints.Email;
+	2. javax.validation.constraints.NotEmpty;
+	3. javax.validation.constraints.Pattern;
+	4. javax.validation.constraints.Size; 
+	5. javax.validation.constraints.NotNull;
+
+## Maven Dependencies : 
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.18.Final</version>
+		</dependency>

@@ -1,0 +1,2 @@
+### Preventing XSS Attack
+=> For preventing XSS Attack (Cross Site Script Attack) we have maintained 1 level of filter. Any value that have been bypassed hibernate validator will now pass to check XSS ( Cross Site Script ). And if it found any javascript elements such as <script> .... </script> then it will reject the value.

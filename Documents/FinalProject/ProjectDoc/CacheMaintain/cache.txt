@@ -1,0 +1,31 @@
+## Cache Maintained
+=> For improving the performance of the website we have maintained cache and prevented from retriving information from database for each time. i.e decreased the database hit count. For that we have used ehcache. once the products are loaded then it is stored into the cache and if any new product is uploaded then the chache memory will appended with the entered new product. And while the maximum size of cache mentioned in the ehcache.xml file is reached then the cache will be cleaned. The libraries used for ehcache are : 
+	
+	1. org.springframework.cache.annotation.CacheEvict;
+	2. org.springframework.cache.annotation.Cacheable;
+
+
+	# maxEntriesLocalHeap
+	=> The maximum number of cache entries or bytes a cache can use in local heap memory, or when set at the CacheManager
+	level
+
+	#maxEntriesLocalDisk
+	=> The maximum number of cache entries or bytes a standalone cache can use on the local disk, or when set at the CacheManager level
+
+	#timeToIdleSeconds VS timeToLiveSeconds
+	timeToIdleSeconds enables cached object to be kept in as long as it is requested in periods shorter than
+	timeToIdleSeconds.
+
+	timeToLiveSeconds will make the cached object be invalidated after that many seconds regardless of how many times or when it was requested.
+
+	Lets say that timeToIdleSeconds = 3, Then the object will be invalidated if it hasn't been requested for 4 seconds.
+
+	If timeToLiveSeconds = 90 , then the object will be removed from cache after few miliseconds in the 90th second of its short life.
+
+## Maven Dependencies : 
+
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.10.2.2.21</version>
+		</dependency>

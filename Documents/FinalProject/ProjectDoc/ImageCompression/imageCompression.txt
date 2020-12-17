@@ -1,0 +1,11 @@
+### Image Compression
+=> user can upload the images of product while uploading products. so we have maintained the limits to upload the file.
+User can upload max of 3 mb as show in figure "defaultUploadSize.png" stated in configuration file servlet.xml . And even after uploading the images in other to maintain the space of the database and server we have applied image compression to the uploaded image and reduced its size. JPEG compression is applied to the image. For that the given libraries are used. 
+
+	1. java.awt.Color;
+	2. java.awt.image.BufferedImage;
+	3. java.io.File;
+	4. java.io.FileInputStream;
+	5. java.io.FileOutputStream;
+	6. java.io.OutputStream;
+	7. java.util.Iterator

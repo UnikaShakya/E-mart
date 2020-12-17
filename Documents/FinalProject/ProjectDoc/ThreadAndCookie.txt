@@ -1,0 +1,10 @@
+
+
+	For maintaining most viewed product, we have maintained cookies of user so that even same user view the product for many time
+	then the viewed count for the user will be 1. Simply product view count willbe recorded if user are the different users.
+	
+	Similarly for decreasing the front display time, or to make page faster we have used background thread for interacting with database.
+	
+	for thread the libraries used are: 
+	 
+	javax.swing.SwingWorker;
